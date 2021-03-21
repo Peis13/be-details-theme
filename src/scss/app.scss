@@ -1,0 +1,52 @@
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * ================================================================================
+ * Foglio di stile principale
+ * ================================================================================ */
+
+/* HTML5 display-role reset for older browsers */
+main, article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/** Dependencies
+ * ======================================== */
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'swiper/swiper-bundle.css';
+@import "/node_modules/magnific-popup/dist/magnific-popup.css";
+
+/** Fonts
+ * ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap'); // DM Serif Display
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap'); // Montserrat
+
+/** Variabili
+ * ======================================== */
+@import 'partials/_variables';
+
+/** Parti comuni
+ * ======================================== */
+@import 'partials/_common';
+@import 'partials/_header';
+// @import 'partials/_side-buttons';
+@import 'partials/_footer';
+
+/** Pagine
+ * ======================================== */
+// @import 'pages/_default';
+@import 'pages/_home';
+// @import 'pages/_offers';
+// @import 'pages/_offer';
+// @import 'pages/_reviews';
+
+/** Fix per IE 11
+ * ======================================== */
+// @import 'partials/_ie';
