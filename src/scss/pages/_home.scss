@@ -1,29 +1,24 @@
-.page-home {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    &.show {
-        overflow: visible;
-    }
-}
 .hero {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    transition: height .8s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: lightblue;
-
-    .wrapper-swipe {
+    margin-top: -100px;
+    position: relative;
+    .overlay {
+        pointer-events: none;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(189.71deg,rgba(0,0,0,.62) 7.19%,rgba(255,255,255,0) 92.7%);
+    }
+    .swipe {
+        z-index: 5;
         position: absolute;
         top: calc((100% - #{$btn_swipe_height}) - 10px);
         left: 50%;
-        // transition: top .5s;
         transform: translateX(-50%);
-    }
-
-    .swipe {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,21 +28,13 @@
         cursor: pointer;
         border-radius: 50%;
         background-color: red;
-        transition: transform .5s;
-        &.touched {
-            transform: scale(1.1);
-            transition: .2s;
-        }
     }
-    &.height-0 {
-        position: fixed;
-        height: calc(#{$btn_swipe_height} + 20px);
-        touch-action: none;
-        .wrapper-swipe {
-
-        }
-        .swipe {
-            transform: rotate(180deg);
-        }
-    }
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
 }

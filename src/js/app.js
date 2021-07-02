@@ -9,18 +9,37 @@ import 'magnific-popup';
 
 $(document).ready(function() {
 
-    var touchmoved = false;
-    $('.swipe').on('touchend', function(e){
-        if(touchmoved === true){
-            $('.page-home').toggleClass('show');
-            $('.hero').toggleClass('height-0');
-        }
-        $(this).removeClass('touched');
-    }).on('touchmove', function(e){
-        touchmoved = true;
-    }).on('touchstart', function(){
-        touchmoved = false;
-        $(this).addClass('touched');
+    /**
+     * Dropdown menù si aprono al click solo su mobile
+     */
+    $('.burger-btn').click(function(e) {
+        console.log(e)
+        // e.preventDefault();
+        //
+        $('.navbar-collapse').fadeIn(300);
+    });
+
+    $('.close-menu').click(function(e) {
+        console.log(e)
+        // e.preventDefault();
+        //
+        $('.navbar-collapse').fadeOut(300);
+    });
+
+
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 
 });
