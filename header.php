@@ -10,21 +10,33 @@
 </head>
 <body>
 
-<header>
+<header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="3177" height="2024">
             </a>
+            <div class="social-list">
+                <div class="social-item">
+                    <img src="<?= get_template_directory_uri(); ?>/img/instagram.svg" alt="facebook">
+                </div>
+                <div class="social-item">
+                    <img src="<?= get_template_directory_uri(); ?>/img/facebook.svg" alt="facebook">
+                </div>
+            </div>
 <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"-->
 <!--                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
 <!--                <img class="menu-icon" src="--><?//= get_template_directory_uri(); ?><!--/img/menu.svg" alt="menu icon" width="16"-->
 <!--                height="16">-->
 <!--            </button>-->
             <button class="navbar-toggler burger-btn">
-                <img class="menu-icon" src="<?= get_template_directory_uri(); ?>/img/menu.svg" alt="menu icon" width="16"
-                height="16">
+                <img src="<?= get_template_directory_uri(); ?>/img/icon-menu.svg" alt="menu icon" width="16"
+                     height="16">
             </button>
+            <div class="close-menu">
+                <img src="<?= get_template_directory_uri(); ?>/img/close-menu.svg" alt="menu icon" width="16"
+                     height="16">
+            </div>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -46,9 +58,6 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <span class="close-menu">XXX</span>
                     </li>
                 </ul>
             </div>

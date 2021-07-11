@@ -34,18 +34,32 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     //
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-collapse').fadeIn(300);
+    setTimeout(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').addClass('height-100vh');
+    }, 300);
+    setTimeout(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeIn(1000);
+    }, 1000);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeIn(1000);
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').click(function (e) {
     console.log(e); // e.preventDefault();
     //
 
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').removeClass('height-100vh');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-collapse').fadeOut(300);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeOut(200);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeOut(200);
   });
-  var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.swiper-container', {
+  var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.hero-slider', {
     spaceBetween: 30,
     effect: 'fade',
     loop: true,
-    autoplay: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true
+    },
+    speed: 1500,
     pagination: {
       el: '.swiper-pagination',
       clickable: true

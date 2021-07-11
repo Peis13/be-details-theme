@@ -1,32 +1,136 @@
-header {
-    z-index: 5;
-    position: relative;
-    background-color: red;
+.header {
+  z-index: 5;
+  position: relative;
+
+  &.height-100vh {
+    height: 100vh;
+  }
 }
+
 .navbar {
-    width: 100%;
-    height: 100px;
+  padding-top: 50px;
+  position: static;
 }
+
+.container-fluid {
+  flex-direction: column;
+}
+
 .navbar-collapse {
+  @media (max-width: 991.98px) {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+  }
 }
-.navbar-nav {
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-}
+
+//logo
 .navbar-brand {
-    img {
-        width: 50px;
-        height: auto;
-    }
-}
-.menu-icon {
-    width: 50px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+
+  img {
+    width: 200px;
     height: auto;
+    @media (max-width: 991.98px) {
+      width: 150px;
+    }
+  }
+}
+
+.social-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .social-item {
+    display: inline-block;
+    padding: 15px;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    z-index: 1;
+    display: none;
+    top: auto;
+    right: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: show-social-list;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes show-social-list {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 10px;
+  }
+}
+
+//menù navigazione
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 991.98px) {
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
+//bottoni menù mobile
+.burger-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  border: none;
+
+  img {
+    width: 35px;
+    height: auto;
+    @media (max-width: 991.98px) {
+      width: 30px;
+    }
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.close-menu {
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation-name: show-close-menu;
+  animation-duration: .5s;
+
+  img {
+    width: 25px;
+    height: auto;
+  }
+}
+
+@keyframes show-close-menu {
+  from {
+    right: -40px;
+  }
+  to {
+    right: 0;
+  }
 }
