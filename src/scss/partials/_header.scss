@@ -1,10 +1,6 @@
 .header {
   z-index: 5;
   position: relative;
-
-  &.height-100vh {
-    height: 100vh;
-  }
 }
 
 .navbar {
@@ -18,7 +14,7 @@
 
 .navbar-collapse {
   @media (max-width: 991.98px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,6 +37,54 @@
   }
 }
 
+//menù navigazione
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 991.98px) {
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
+.nav-item {
+  margin: 0 20px;
+  text-transform: uppercase;
+
+  .nav-link {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: .2s;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+        transition: .4s;
+      }
+    }
+  }
+}
+
+.nav-item.active {
+  .nav-link {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
 .social-list {
   position: absolute;
   top: 0;
@@ -48,7 +92,7 @@
 
   .social-item {
     display: inline-block;
-    padding: 15px;
+    margin: 15px;
 
     img {
       width: 30px;
@@ -60,6 +104,7 @@
     display: none;
     top: auto;
     right: auto;
+    position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -74,17 +119,6 @@
   }
   to {
     bottom: 10px;
-  }
-}
-
-//menù navigazione
-.navbar-nav {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 991.98px) {
-    height: 100%;
-    background-color: #fff;
   }
 }
 
@@ -107,6 +141,28 @@
   &:focus {
     box-shadow: none;
   }
+
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    animation-name: show-burger-btn;
+    animation-duration: .5s;
+
+    img {
+      background-color: #fff;
+      box-shadow: 0px 0px 20px 10px #fff;
+    }
+  }
+}
+
+@keyframes show-burger-btn {
+  from {
+    right: -40px;
+  }
+  to {
+    right: 0;
+  }
 }
 
 .close-menu {
@@ -114,7 +170,7 @@
   display: none;
   cursor: pointer;
   padding: 15px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   animation-name: show-close-menu;

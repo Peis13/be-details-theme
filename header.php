@@ -13,16 +13,16 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= get_home_url(); ?>">
                 <img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="3177" height="2024">
             </a>
             <div class="social-list">
-                <div class="social-item">
+                <a class="social-item" href="#">
                     <img src="<?= get_template_directory_uri(); ?>/img/instagram.svg" alt="facebook">
-                </div>
-                <div class="social-item">
+                </a>
+                <a class="social-item" href="#">
                     <img src="<?= get_template_directory_uri(); ?>/img/facebook.svg" alt="facebook">
-                </div>
+                </a>
             </div>
 <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"-->
 <!--                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
@@ -37,30 +37,20 @@
                 <img src="<?= get_template_directory_uri(); ?>/img/close-menu.svg" alt="menu icon" width="16"
                      height="16">
             </div>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+
+            <!--navbar-->
+            <?php wp_nav_menu([
+                'menu'            => 'menu-superior',
+                'theme_location'  => 'menu-superior',
+                'depth'           => 2,
+                'container'       => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id'    => 'navbarNavDropdown',
+                'menu_class'      => 'navbar-nav',
+                'dropdown_class'  => 'dropdown-menu',
+                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'          => new WP_Bootstrap_Navwalker(),
+            ]); ?>
         </div>
     </nav>
 </header>

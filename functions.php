@@ -34,31 +34,31 @@ add_action('wp_enqueue_scripts', 'baltic_include_styles_scripts');
 /**
  * Register menus.
  */
-function baltic_register_nav_menu()
+function be_register_nav_menu()
 {
     register_nav_menus([
         'menu-superior' => 'Menu navigazione alto',
     ]);
 }
 
-add_action('after_setup_theme', 'baltic_register_nav_menu', 0);
+add_action('after_setup_theme', 'be_register_nav_menu', 0);
 
 
 /**
  * Register Bootstrap NavWalker.
  */
-function baltic_include_navwalker()
+function be_include_navwalker()
 {
     require_once get_template_directory() . '/lib/class-wp-bootstrap-navwalker.php';
 }
 
-add_action('after_setup_theme', 'baltic_include_navwalker');
+add_action('after_setup_theme', 'be_include_navwalker');
 
 
 /**
  * Register image sizes.
  */
-function baltic_setup_image_sizes()
+function be_setup_image_sizes()
 {
     add_theme_support('post-thumbnails');
 
@@ -68,7 +68,7 @@ function baltic_setup_image_sizes()
     add_image_size('slider-strengths-image', 850, 600, true);
 }
 
-add_action('after_setup_theme', 'baltic_setup_image_sizes');
+add_action('after_setup_theme', 'be_setup_image_sizes');
 
 
 /**
@@ -142,14 +142,14 @@ add_filter('admin_footer_text', function () {
 /**
  * Move jQuery to the footer.
  */
-function baltic_enqueue_scripts()
+function be_enqueue_scripts()
 {
     wp_scripts()->add_data('jquery', 'group', 1);
     wp_scripts()->add_data('jquery-core', 'group', 1);
     wp_scripts()->add_data('jquery-migrate', 'group', 1);
 }
 
-add_action('wp_enqueue_scripts', 'baltic_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'be_enqueue_scripts');
 
 
 /**

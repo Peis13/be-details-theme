@@ -1,9 +1,13 @@
 body {
-    position: relative;
-    overflow-x: hidden;
-    background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #fff;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }

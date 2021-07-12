@@ -11664,6 +11664,9 @@ body {
   overflow-x: hidden;
   background-color: #fff;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 img {
   width: 100%;
@@ -11672,9 +11675,6 @@ img {
 .header {
   z-index: 5;
   position: relative;
-}
-.header.height-100vh {
-  height: 100vh;
 }
 
 .navbar {
@@ -11688,7 +11688,7 @@ img {
 
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -11711,6 +11711,46 @@ img {
   }
 }
 
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
+.nav-item {
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+.nav-item .nav-link {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+.nav-item .nav-link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+}
+.nav-item .nav-link:hover:after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.nav-item.active .nav-link:after {
+  width: 100%;
+}
+
 .social-list {
   position: absolute;
   top: 0;
@@ -11718,7 +11758,7 @@ img {
 }
 .social-list .social-item {
   display: inline-block;
-  padding: 15px;
+  margin: 15px;
 }
 .social-list .social-item img {
   width: 30px;
@@ -11729,6 +11769,7 @@ img {
     display: none;
     top: auto;
     right: auto;
+    position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -11756,18 +11797,6 @@ img {
     bottom: 10px;
   }
 }
-.navbar-nav {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    height: 100%;
-    background-color: #fff;
-  }
-}
-
 .burger-btn {
   position: absolute;
   right: 0;
@@ -11787,13 +11816,43 @@ img {
 .burger-btn:focus {
   box-shadow: none;
 }
+.burger-btn.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  -webkit-animation-name: show-burger-btn;
+          animation-name: show-burger-btn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.burger-btn.fixed img {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 10px #fff;
+}
 
+@-webkit-keyframes show-burger-btn {
+  from {
+    right: -40px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes show-burger-btn {
+  from {
+    right: -40px;
+  }
+  to {
+    right: 0;
+  }
+}
 .close-menu {
   z-index: 1;
   display: none;
   cursor: pointer;
   padding: 15px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   -webkit-animation-name: show-close-menu;

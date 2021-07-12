@@ -27,30 +27,46 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   /**
-   * Dropdown menù si aprono al click solo su mobile
+   * Burger menù appare in basso dopo lo scroll dell'intro
    */
+  window.onscroll = function () {
+    fixMenu(offsetToSticky);
+  };
+
+  var intro = document.getElementById('intro');
+  var offsetToSticky = intro.offsetTop;
+  /**
+   * Burger menù apertura
+   */
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-btn').click(function (e) {
     console.log(e); // e.preventDefault();
     //
 
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('overflow-hidden');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-collapse').fadeIn(300);
-    setTimeout(function () {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').addClass('height-100vh');
-    }, 300);
     setTimeout(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeIn(1000);
     }, 1000);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeIn(1000);
   });
+  /**
+   * Burger menù chiusura
+   */
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').click(function (e) {
     console.log(e); // e.preventDefault();
     //
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').removeClass('height-100vh');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('overflow-hidden');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-collapse').fadeOut(300);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeOut(200);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeOut(200);
   });
+  /**
+   * Slider Hero
+   */
+
   var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.hero-slider', {
     spaceBetween: 30,
     effect: 'fade',
@@ -70,6 +86,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     }
   });
 });
+
+function fixMenu(offsetToSticky) {
+  if (window.pageYOffset > offsetToSticky) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-btn').addClass('fixed');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-btn').removeClass('fixed');
+  }
+}
 
 /***/ }),
 
