@@ -1,3 +1,11 @@
+/**
+ * ================================================================================
+ * Foglio di stile Pagina Home
+ * ================================================================================ */
+
+
+/** Hero
+ * ======================================== */
 .hero {
   width: 100%;
   height: 800px;
@@ -22,5 +30,39 @@
   .swiper-slide {
     background-position: center;
     background-size: cover;
+  }
+}
+
+
+
+/** Modelli
+ * ======================================== */
+.modelli {
+  .image {
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+
+
+
+/** Animazioni
+ * ======================================== */
+.animated {
+  opacity: 0;
+  transition: transform 0.9s, opacity 0.6s;
+  position: relative;
+
+  &.right {
+    transform: translateX(50%);
+  }
+
+  &.left {
+    transform: translateX(-50%);
+  }
+
+  &.start-animation {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

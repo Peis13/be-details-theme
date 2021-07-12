@@ -64,8 +64,31 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeOut(200);
   });
   /**
+   * Immagini Modelli Home Animated
+   */
+
+  (function () {
+    var actOnScroll = function actOnScroll() {
+      var pageScrollFromTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).scrollTop(); // Animated
+
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.animated').each(function () {
+        var _this = this;
+
+        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).offset().top <= pageScrollFromTop + window.innerHeight) {
+          setTimeout(function () {
+            return jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).addClass('start-animation');
+          }, 100);
+        }
+      });
+    };
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(actOnScroll);
+    actOnScroll();
+  })();
+  /**
    * Slider Hero
    */
+
 
   var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.hero-slider', {
     spaceBetween: 30,
