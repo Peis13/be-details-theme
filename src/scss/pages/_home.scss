@@ -34,16 +34,17 @@
 }
 
 
-
 /** Modelli
  * ======================================== */
 .modelli {
   .image {
-    max-height: 500px;
+    max-height: 700px;
     object-fit: cover;
+    @media (max-width: 1199.98px) {
+      max-height: 500px;
+    }
   }
 }
-
 
 
 /** Animazioni

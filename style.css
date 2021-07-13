@@ -11930,9 +11930,14 @@ img {
 /** Modelli
  * ======================================== */
 .modelli .image {
-  max-height: 500px;
+  max-height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1199.98px) {
+  .modelli .image {
+    max-height: 500px;
+  }
 }
 
 /** Animazioni
