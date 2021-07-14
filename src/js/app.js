@@ -84,7 +84,7 @@ $(document).ready(function () {
             // Animated
             $('.animated').each(function () {
                 if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
-                    setTimeout(() => $(this).addClass('start-animation'), 500)
+                    setTimeout(() => $(this).addClass('start-animation'), 100)
                 }
             });
         }

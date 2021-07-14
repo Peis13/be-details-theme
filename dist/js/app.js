@@ -100,7 +100,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).offset().top <= pageScrollFromTop + window.innerHeight) {
           setTimeout(function () {
             return jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).addClass('start-animation');
-          }, 500);
+          }, 100);
         }
       });
     };
