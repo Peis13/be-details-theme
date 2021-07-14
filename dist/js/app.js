@@ -24,11 +24,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import 'core-js/es/object';
+// import '../../dist/js/parallax.js-1.5.0/parallax';
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  var image = document.getElementsByClassName('thumbnail');
+  new simpleParallax(image, {
+    scale: 2
+  });
   /**
    * Burger menù appare in basso dopo lo scroll dell'intro
    */
+
   window.onscroll = function () {
     fixMenu(offsetToSticky);
   };

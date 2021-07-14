@@ -4,7 +4,7 @@ add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
 } );
 
-load_theme_textdomain('baltic-theme', get_template_directory().'/languages');
+load_theme_textdomain('be-theme', get_template_directory().'/languages');
 
 /**
  * Let WordPress manage the document title.
@@ -18,17 +18,17 @@ add_theme_support('title-tag');
 /**
  * Load styles and scripts.
  */
-function baltic_include_styles_scripts()
+function be_include_styles_scripts()
 {
     // Style
-    wp_enqueue_style('baltic-script', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('be-script', get_template_directory_uri() . '/style.css');
 
     // Scripts
-    wp_enqueue_script('baltic-script', get_template_directory_uri() . '/dist/js/app.js', [], false, true);
+    wp_enqueue_script('be-script', get_template_directory_uri() . '/dist/js/app.js', [], false, true);
 }
 
-add_action('wp_enqueue_style', 'baltic_include_styles_scripts');
-add_action('wp_enqueue_scripts', 'baltic_include_styles_scripts');
+add_action('wp_enqueue_style', 'be_include_styles_scripts');
+add_action('wp_enqueue_scripts', 'be_include_styles_scripts');
 
 
 /**
