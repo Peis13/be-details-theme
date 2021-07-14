@@ -9,10 +9,6 @@ import 'magnific-popup';
 // import '../../dist/js/parallax.js-1.5.0/parallax';
 
 $(document).ready(function () {
-    var image = document.getElementsByClassName('thumbnail');
-    new simpleParallax(image, {
-        scale: 2
-    });
 
     /**
      * Burger menù appare in basso dopo lo scroll dell'intro
@@ -22,7 +18,6 @@ $(document).ready(function () {
     };
     var intro = document.getElementById('intro');
     var offsetToSticky = intro.offsetTop;
-
 
 
     /**
@@ -41,7 +36,6 @@ $(document).ready(function () {
     });
 
 
-
     /**
      * Burger menù chiusura
      */
@@ -54,29 +48,6 @@ $(document).ready(function () {
         $('.close-menu').fadeOut(200);
         $('.social-list').fadeOut(200);
     });
-
-
-
-    /**
-     * Immagini Modelli Home Animated
-     */
-    (function () {
-
-        const actOnScroll = () => {
-            let pageScrollFromTop = $(document).scrollTop();
-
-            // Animated
-            $('.animated').each(function() {
-                if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
-                    setTimeout(() => $(this).addClass('start-animation'), 500)
-                }
-            });
-        }
-
-        $(window).scroll(actOnScroll);
-        actOnScroll();
-    })();
-
 
 
     /**
@@ -99,6 +70,36 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+
+
+    /**
+     * Immagini Modelli Home Animated
+     */
+    (function () {
+
+        const actOnScroll = () => {
+            let pageScrollFromTop = $(document).scrollTop();
+
+            // Animated
+            $('.animated').each(function () {
+                if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
+                    setTimeout(() => $(this).addClass('start-animation'), 500)
+                }
+            });
+        }
+
+        $(window).scroll(actOnScroll);
+        actOnScroll();
+    })();
+
+
+    /**
+     * Sezione Parallax
+     */
+    var image = document.getElementsByClassName('thumbnail');
+    new simpleParallax(image, {
+        scale: 2
     });
 
 });

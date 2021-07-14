@@ -27,14 +27,9 @@ __webpack_require__.r(__webpack_exports__);
 // import '../../dist/js/parallax.js-1.5.0/parallax';
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  var image = document.getElementsByClassName('thumbnail');
-  new simpleParallax(image, {
-    scale: 2
-  });
   /**
    * Burger menù appare in basso dopo lo scroll dell'intro
    */
-
   window.onscroll = function () {
     fixMenu(offsetToSticky);
   };
@@ -70,6 +65,28 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeOut(200);
   });
   /**
+   * Slider Hero
+   */
+
+  var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.hero-slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true
+    },
+    speed: 1500,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  /**
    * Immagini Modelli Home Animated
    */
 
@@ -92,27 +109,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     actOnScroll();
   })();
   /**
-   * Slider Hero
+   * Sezione Parallax
    */
 
 
-  var swiper = new (swiper_swiper_bundle_js__WEBPACK_IMPORTED_MODULE_3___default())('.hero-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    speed: 1500,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
+  var image = document.getElementsByClassName('thumbnail');
+  new simpleParallax(image, {
+    scale: 2
   });
 });
 
