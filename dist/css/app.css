@@ -11942,6 +11942,11 @@ img {
 
 /** Parallax
  * ======================================== */
+.parallax-window {
+  min-height: 700px;
+  background: transparent;
+}
+
 .parallax {
   width: 100%;
   height: 600px;

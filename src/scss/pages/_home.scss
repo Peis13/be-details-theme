@@ -52,10 +52,10 @@
 //https://simpleparallax.com/#main
 //https://pixelcog.github.io/parallax.js/
 
-//.parallax-window { //con CDN
-//  min-height: 700px;
-//  background: transparent;
-//}
+.parallax-window { //con CDN
+  min-height: 700px;
+  background: transparent;
+}
 
 .parallax {
   width: 100%;
@@ -78,7 +78,7 @@
   }
 }
 
-
+//normal W3school
 .parallax-image {
   z-index: 0;
   width: 100%;

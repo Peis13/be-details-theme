@@ -95,11 +95,13 @@ $(document).ready(function () {
 
 
     /**
-     * Sezione Parallax
+     * Sezione SimpleParallax
      */
-    var image = document.getElementsByClassName('thumbnail');
+    var image = document.getElementsByClassName('simple-parallax');
     new simpleParallax(image, {
-        scale: 2
+        // scale: 1.5,
+        orientation: 'right',
+        // overflow: true,
     });
 
 });
