@@ -11684,9 +11684,59 @@ img {
   width: 100%;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .header {
   z-index: 5;
   position: relative;
+}
+.header .social-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 991.98px) {
+  .header .social-menu {
+    z-index: 1;
+    display: none;
+    top: auto;
+    right: auto;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation-name: show-social-menu;
+            animation-name: show-social-menu;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+}
+.header .social-menu .social-link {
+  display: inline-block;
+  margin: 15px 8px;
+}
+.header .social-menu .social-link img {
+  width: 30px;
+}
+@-webkit-keyframes show-social-menu {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 10px;
+  }
+}
+@keyframes show-social-menu {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 10px;
+  }
 }
 
 .navbar {
@@ -11763,58 +11813,14 @@ img {
   width: 100%;
 }
 
-.social-list {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.social-list .social-item {
-  display: inline-block;
-  margin: 15px;
-}
-.social-list .social-item img {
-  width: 30px;
-}
-@media (max-width: 991.98px) {
-  .social-list {
-    z-index: 1;
-    display: none;
-    top: auto;
-    right: auto;
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-animation-name: show-social-list;
-            animation-name: show-social-list;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-  }
-}
-
-@-webkit-keyframes show-social-list {
-  from {
-    bottom: -50px;
-  }
-  to {
-    bottom: 10px;
-  }
-}
-
-@keyframes show-social-list {
-  from {
-    bottom: -50px;
-  }
-  to {
-    bottom: 10px;
-  }
-}
 .burger-btn {
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 15px;
   border: none;
+  opacity: 0.8;
+  background-color: #fff;
 }
 .burger-btn img {
   width: 35px;
@@ -11836,10 +11842,6 @@ img {
           animation-name: show-burger-btn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-}
-.burger-btn.fixed img {
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 10px #fff;
 }
 
 @-webkit-keyframes show-burger-btn {
@@ -11894,6 +11896,47 @@ img {
     right: 0;
   }
 }
+/**
+ * ================================================================================
+ * Foglio di stile Footer
+ * ================================================================================ */
+.footer {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .social-link {
+  margin: 0 5px;
+}
+
+/** Footer top
+ * ======================================== */
+.footer-top {
+  padding: 40px 0;
+}
+.footer-top .brand {
+  letter-spacing: 3px;
+}
+
+.footer-divisor {
+  width: 50%;
+  margin: 0 auto;
+  opacity: 0.4;
+  background-color: #fff;
+}
+
+/** Footer bottom
+ * ======================================== */
+.footer-bottom {
+  padding: 20px 0;
+}
+.footer-bottom .lista-contatti {
+  font-size: 14px;
+}
+
 /** Pagine
  * ======================================== */
 /**
@@ -11943,7 +11986,7 @@ img {
 /** Parallax
  * ======================================== */
 .parallax-window {
-  min-height: 700px;
+  min-height: 500px;
   background: transparent;
 }
 
@@ -11983,7 +12026,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../img/woman.jpeg");
+  background-image: url("../../img/woman5.jpeg");
 }
 
 /** Animazioni

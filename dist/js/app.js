@@ -49,7 +49,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     setTimeout(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeIn(1000);
     }, 1000);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeIn(1000);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-menu').fadeIn(1000);
   });
   /**
    * Burger menù chiusura
@@ -62,7 +62,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('overflow-hidden');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-collapse').fadeOut(300);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-menu').fadeOut(200);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-list').fadeOut(200);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.social-menu').fadeOut(200);
   });
   /**
    * Slider Hero
@@ -108,17 +108,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(actOnScroll);
     actOnScroll();
   })();
-  /**
-   * Sezione SimpleParallax
-   */
-
-
-  var image = document.getElementsByClassName('simple-parallax');
-  new simpleParallax(image, {
-    // scale: 1.5,
-    orientation: 'right' // overflow: true,
-
-  });
 });
 
 function fixMenu(offsetToSticky) {

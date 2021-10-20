@@ -16,11 +16,11 @@
             <a class="navbar-brand" href="<?= get_home_url(); ?>">
                 <img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="3177" height="2024">
             </a>
-            <div class="social-list">
-                <a class="social-item" href="#">
+            <div class="social-menu">
+                <a class="social-link" href="#">
                     <img src="<?= get_template_directory_uri(); ?>/img/instagram.svg" alt="facebook">
                 </a>
-                <a class="social-item" href="#">
+                <a class="social-link" href="#">
                     <img src="<?= get_template_directory_uri(); ?>/img/facebook.svg" alt="facebook">
                 </a>
             </div>

@@ -1,0 +1,48 @@
+/**
+ * ================================================================================
+ * Foglio di stile Footer
+ * ================================================================================ */
+
+
+.footer {
+  color: #fff;
+  background-color: #1a1a1a;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-link {
+    margin: 0 5px;
+  }
+}
+
+
+/** Footer top
+ * ======================================== */
+.footer-top {
+  padding: 40px 0;
+
+  .brand {
+    letter-spacing: 3px;
+  }
+}
+
+.footer-divisor {
+  width: 50%;
+  margin: 0 auto;
+  opacity: .4;
+  background-color: #fff;
+}
+
+
+/** Footer bottom
+ * ======================================== */
+.footer-bottom {
+  padding: 20px 0;
+
+  .lista-contatti {
+    font-size: 14px;
+  }
+}

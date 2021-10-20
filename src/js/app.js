@@ -32,7 +32,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.close-menu').fadeIn(1000);
         }, 1000);
-        $('.social-list').fadeIn(1000);
+        $('.social-menu').fadeIn(1000);
     });
 
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
         $('.navbar-collapse').fadeOut(300);
         $('.close-menu').fadeOut(200);
-        $('.social-list').fadeOut(200);
+        $('.social-menu').fadeOut(200);
     });
 
 
@@ -92,17 +92,6 @@ $(document).ready(function () {
         $(window).scroll(actOnScroll);
         actOnScroll();
     })();
-
-
-    /**
-     * Sezione SimpleParallax
-     */
-    var image = document.getElementsByClassName('simple-parallax');
-    new simpleParallax(image, {
-        // scale: 1.5,
-        orientation: 'right',
-        // overflow: true,
-    });
 
 });
 
