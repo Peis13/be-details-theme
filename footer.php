@@ -12,8 +12,8 @@
     <!--Footer bottom-->
     <div class="footer-bottom">
         <ul class="lista-contatti">
-            <li>e-mail: <a href="mailto:thebedetails@gmail.com">thebedetails@gmail.com</a></li>
-            <li>tel: <a href="tel:00393403635055">+39 340-3635055</a></li>
+            <li><a href="mailto:thebedetails@gmail.com">thebedetails@gmail.com</a></li>
+            <li><a href="tel:00393403635055">+39 340-3635055</a></li>
             <li class="mt-4">
                 <a class="social-link" href="#">
                     <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
