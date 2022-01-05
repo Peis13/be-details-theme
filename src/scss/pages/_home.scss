@@ -34,6 +34,19 @@
 }
 
 
+/** Loghi modelli
+ * ======================================== */
+.loghi {
+  .logo-modello {
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: .3s;
+    }
+  }
+}
+
 /** Modelli
  * ======================================== */
 .modelli {

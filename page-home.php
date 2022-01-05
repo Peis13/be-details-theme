@@ -10,6 +10,8 @@ get_header();
 
         <?php get_template_part('templates/home/intro'); ?>
 
+        <?php get_template_part('templates/home/loghi-modelli'); ?>
+
         <?php get_template_part('templates/home/modelli'); ?>
 
         <?php get_template_part('templates/home/store'); ?>

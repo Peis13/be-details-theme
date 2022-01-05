@@ -11659,6 +11659,8 @@ textarea.form-control-lg {
  * ======================================== */
 /** Variabili
  * ======================================== */
+/** Colori
+ * ======================================== */
 /** Parti comuni
  * ======================================== */
 /**
@@ -11688,6 +11690,19 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.cta {
+  padding: 12px 25px;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  transition: 0.5s;
+}
+.cta:hover {
+  color: #565656;
+  background-color: #c9fd4b;
+  transition: 0.5s;
 }
 
 .header {
@@ -11968,6 +11983,16 @@ ul {
 .swiper-container.hero-slider .swiper-slide {
   background-position: center;
   background-size: cover;
+}
+
+/** Loghi modelli
+ * ======================================== */
+.loghi .logo-modello {
+  transition: 0.3s;
+}
+.loghi .logo-modello:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
 }
 
 /** Modelli

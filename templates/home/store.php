@@ -1,5 +1,13 @@
 <div id="store" class="store sezione">
 
+    <div class="">
+        Nessuna vendita online, abbiamo un debole per il tuo negozio di paese.
+    </div>
+
+    <div class="image">
+        <img class="" src="<?= get_template_directory_uri(); ?>/img/woman.jpeg" alt="be details sunglasses" width="1337" height="1600">
+    </div>
+
     <!--con CDN-->
     <!--parallax.js package-->
     <div class="prova sezione">
