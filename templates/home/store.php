@@ -1,11 +1,17 @@
 <div id="store" class="store sezione">
 
-    <div class="">
-        Nessuna vendita online, abbiamo un debole per il tuo negozio di paese.
-    </div>
+    <div class="container">
+        <h2 class="text-center">
+            Nessuna vendita online, abbiamo un debole per il tuo negozio di paese.
+        </h2>
 
-    <div class="image">
-        <img class="" src="<?= get_template_directory_uri(); ?>/img/woman.jpeg" alt="be details sunglasses" width="1337" height="1600">
+        <div>
+            <img src="<?= get_field('store_map'); ?>" alt="mappa store">
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <a href="<?= get_field('link_pagina_store'); ?>" class="cta">Scopri i nostri store &raquo;</a>
+        </div>
     </div>
 
     <!--con CDN-->
