@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= get_home_url(); ?>">
-                <img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="3177" height="2024">
+                <img src="<?= get_template_directory_uri(); ?>/img/loghi/logo.png" alt="logo">
             </a>
             <div class="social-menu">
                 <a class="social-link" href="#">
