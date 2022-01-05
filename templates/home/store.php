@@ -18,7 +18,7 @@
     <!--parallax.js package-->
     <div class="prova sezione">
         <div class="parallax-window" data-parallax="scroll" data-speed="0.5"
-             data-image-src="<?= get_template_directory_uri(); ?>/img/woman.jpeg"></div>
+             data-image-src="<?= get_field('parallax_img'); ?>"></div>
     </div>
 
     <div class="content">
