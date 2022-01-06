@@ -59,6 +59,16 @@
   }
 }
 
+/** Features
+ * ======================================== */
+@media (max-width: 991.98px) {
+  .features {
+    .icons {
+      justify-content: flex-start !important;
+    }
+  }
+}
+
 
 /** Parallax
  * ======================================== */

@@ -1,5 +1,5 @@
 <?php if (have_rows('modelli', 'option')): ?>
-    <div id="loghi" class="loghi text-center">
+    <div id="loghi" class="loghi sezione text-center">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
                 <?php while (have_rows('modelli', 'option')): the_row(); ?>

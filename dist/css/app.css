@@ -11681,7 +11681,7 @@ body.overflow-hidden {
 }
 
 .sezione {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 img {
@@ -12014,6 +12014,13 @@ h2, .h2 {
   }
 }
 
+/** Features
+ * ======================================== */
+@media (max-width: 991.98px) {
+  .features .icons {
+    justify-content: flex-start !important;
+  }
+}
 /** Parallax
  * ======================================== */
 .parallax-window {
