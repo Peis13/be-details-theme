@@ -3,12 +3,12 @@
 
 <?php
 /**
- * The template for displaying all pages
+ * The templates for displaying all pages
  *
- * This is the template that displays all pages by default.
+ * This is the templates that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
- * different template.
+ * different templates.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

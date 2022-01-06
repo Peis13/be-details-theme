@@ -37,7 +37,6 @@ footer, header, hgroup, menu, nav, section {
  * ======================================== */
 @import 'partials/_common';
 @import 'partials/_header';
-// @import 'partials/_side-buttons';
 @import 'partials/_footer';
 
 /** Pagine
@@ -47,6 +46,10 @@ footer, header, hgroup, menu, nav, section {
 // @import 'pages/_offers';
 // @import 'pages/_offer';
 // @import 'pages/_reviews';
+
+/** Templates
+ * ======================================== */
+@import 'templates/contact-form';
 
 /** Fix per IE 11
  * ======================================== */

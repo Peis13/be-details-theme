@@ -12021,6 +12021,12 @@ h2, .h2 {
     justify-content: flex-start !important;
   }
 }
+@media (max-width: 767.98px) {
+  .features .icons .feature {
+    margin-bottom: 50px;
+  }
+}
+
 /** Parallax
  * ======================================== */
 .parallax-window {
@@ -12083,6 +12089,64 @@ h2, .h2 {
 .animated.start-animation {
   opacity: 1;
   transform: translateX(0);
+}
+
+/** Templates
+ * ======================================== */
+/**
+ * ================================================================================
+ * Foglio di stile del Form di Contatto
+ * ================================================================================ */
+/** Form
+ * ======================================== */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+@media (max-width: 991.98px) {
+  .contact-form form {
+    width: 70%;
+  }
+}
+@media (max-width: 575.98px) {
+  .contact-form form {
+    width: 100%;
+  }
+}
+.contact-form form label {
+  margin-bottom: 15px;
+}
+.contact-form form input:not([type=submit]),
+.contact-form form textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  transition: 0.3s;
+}
+.contact-form form input:not([type=submit]):focus,
+.contact-form form textarea:focus {
+  border-bottom: 2px solid #000;
+  outline: none;
+  transition: 0.3s;
+}
+.contact-form form textarea {
+  height: 100px;
+}
+.contact-form form input[type=submit] {
+  padding: 12px 25px;
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  border: 2px solid #000;
+  transition: 0.5s;
+}
+.contact-form form input[type=submit]:hover {
+  color: #565656;
+  background-color: #c9fd4b;
+  transition: 0.5s;
 }
 
 /** Fix per IE 11

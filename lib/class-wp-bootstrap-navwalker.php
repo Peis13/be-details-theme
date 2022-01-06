@@ -278,7 +278,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
 			}
 
-			/** This filter is documented in wp-includes/post-template.php */
+			/** This filter is documented in wp-includes/post-templates.php */
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
 
 			/**

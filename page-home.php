@@ -18,7 +18,9 @@ get_header();
 
         <?php get_template_part('templates/home/parallax'); ?>
 
-        <?php get_template_part('templates/home/features'); ?>
+        <?php get_template_part('templates/features'); ?>
+
+        <?php get_template_part('templates/contact-form'); ?>
 
     </main>
 

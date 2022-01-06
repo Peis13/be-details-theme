@@ -1,0 +1,62 @@
+/**
+ * ================================================================================
+ * Foglio di stile del Form di Contatto
+ * ================================================================================ */
+
+
+/** Form
+ * ======================================== */
+.contact-form {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+
+    @media (max-width: 991.98px) {
+      width: 70%;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 100%;
+    }
+
+    label {
+      margin-bottom: 15px;
+    }
+
+    input:not([type="submit"]),
+    textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid lightgray;
+      transition: .3s;
+
+      &:focus {
+        border-bottom: 2px solid #000;
+        outline: none;
+        transition: .3s;
+      }
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      padding: 12px 25px;
+      color: #000;
+      background-color: #fff;
+      text-decoration: none;
+      border: 2px solid #000;
+      transition: .5s;
+
+      &:hover {
+        color: $gray;
+        background-color: $yellow;
+        transition: .5s;
+      }
+    }
+  }
+}
