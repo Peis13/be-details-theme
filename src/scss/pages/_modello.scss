@@ -1,0 +1,49 @@
+/**
+ * ================================================================================
+ * Foglio di stile Pagina Modello
+ * ================================================================================ */
+
+
+/** Modello
+ * ======================================== */
+.page-modello {
+  .anno-modello {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+  }
+
+  .singolo-colore {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tecniche-modello {
+  .wrapper {
+    position: relative;
+
+    &:after {
+      z-index: -1;
+      content: "";
+      width: 70px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--after-bg-color);
+
+      @media (max-width: 575.98px) {
+        width: 100px;
+        height: 100px;
+        top: -62px;
+      }
+    }
+  }
+}
+
+.titolo-tecniche {
+  letter-spacing: 15px;
+}

@@ -11701,6 +11701,11 @@ ul {
 
 h2, .h2 {
   font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 .cta {
@@ -12119,6 +12124,48 @@ h2, .h2 {
 .animated.start-animation {
   opacity: 1;
   transform: translateX(0);
+}
+
+/**
+ * ================================================================================
+ * Foglio di stile Pagina Modello
+ * ================================================================================ */
+/** Modello
+ * ======================================== */
+.page-modello .anno-modello {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+}
+.page-modello .singolo-colore {
+  margin-bottom: 40px;
+}
+.page-modello .singolo-colore:last-child {
+  margin-bottom: 0;
+}
+
+.tecniche-modello .wrapper {
+  position: relative;
+}
+.tecniche-modello .wrapper:after {
+  z-index: -1;
+  content: "";
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--after-bg-color);
+}
+@media (max-width: 575.98px) {
+  .tecniche-modello .wrapper:after {
+    width: 100px;
+    height: 100px;
+    top: -62px;
+  }
+}
+
+.titolo-tecniche {
+  letter-spacing: 15px;
 }
 
 /** Templates
