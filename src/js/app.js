@@ -5,8 +5,6 @@ import $ from 'jquery';
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import Swiper from 'swiper/swiper-bundle.js';
 import 'magnific-popup';
-// import 'core-js/es/object';
-// import '../../dist/js/parallax.js-1.5.0/parallax';
 
 $(document).ready(function () {
 
@@ -14,10 +12,8 @@ $(document).ready(function () {
      * Burger menù appare in basso dopo lo scroll dell'intro
      */
     window.onscroll = function () {
-        fixMenu(offsetToSticky)
+        fixMenu(400)
     };
-    var intro = document.getElementById('intro');
-    var offsetToSticky = intro.offsetTop;
 
 
     /**

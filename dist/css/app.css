@@ -11683,6 +11683,11 @@ body.overflow-hidden {
 .sezione {
   padding: 80px 0;
 }
+@media (max-width: 767.98px) {
+  .sezione {
+    padding: 60px 0;
+  }
+}
 
 img {
   width: 100%;
@@ -11709,6 +11714,12 @@ h2, .h2 {
   color: #565656;
   background-color: #c9fd4b;
   transition: 0.5s;
+}
+
+@media (max-width: 991.98px) {
+  .action {
+    justify-content: center !important;
+  }
 }
 
 .header {
@@ -12001,19 +12012,6 @@ h2, .h2 {
   transition: 0.3s;
 }
 
-/** Modelli
- * ======================================== */
-.modelli .image {
-  max-height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 1199.98px) {
-  .modelli .image {
-    max-height: 500px;
-  }
-}
-
 /** Features
  * ======================================== */
 @media (max-width: 991.98px) {
@@ -12071,6 +12069,38 @@ h2, .h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../../img/woman5.jpeg");
+}
+
+/**
+ * ================================================================================
+ * Foglio di stile Pagina Modelli
+ * ================================================================================ */
+/** Modelli
+ * ======================================== */
+.modelli .cover-modello {
+  max-height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1199.98px) {
+  .modelli .cover-modello {
+    max-height: 500px;
+  }
+}
+.modelli .cover-modello:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+@media (max-width: 991.98px) {
+  .modelli .logo-modello {
+    flex-direction: row !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .modelli .logo-modello .logo-image {
+    width: 50%;
+    margin-right: 20px;
+  }
 }
 
 /** Animazioni

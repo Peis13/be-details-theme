@@ -14,7 +14,7 @@
     </div>
 
 
-    <div class="parallax d-flex align-items-center">
-        <div class="parallax-image" style="background-image:url(<?= get_template_directory_uri(); ?>/img/woman5.jpeg)"></div>
-    </div>
+<!--    <div class="parallax d-flex align-items-center">-->
+<!--        <div class="parallax-image" style="background-image:url(--><?//= get_template_directory_uri(); ?>/*/img/woman5.jpeg)"></div>*/
+/*    </div>*/
 </div>

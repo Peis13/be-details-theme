@@ -12,8 +12,6 @@ get_header();
 
         <?php get_template_part('templates/home/loghi-modelli'); ?>
 
-        <?php //get_template_part('templates/home/modelli'); ?>
-
         <?php get_template_part('templates/home/store'); ?>
 
         <?php get_template_part('templates/home/parallax'); ?>

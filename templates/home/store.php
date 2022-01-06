@@ -5,11 +5,11 @@
             Nessuna vendita online, abbiamo un debole per il tuo negozio di paese.
         </h2>
 
-        <div>
+        <div class="mb-3">
             <img src="<?= get_field('store_map'); ?>" alt="mappa store">
         </div>
 
-        <div class="d-flex justify-content-end">
+        <div class="action d-flex justify-content-end">
             <a href="<?= get_field('link_pagina_store'); ?>" class="cta">Scopri i nostri store &raquo;</a>
         </div>
     </div>
