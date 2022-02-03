@@ -12087,29 +12087,64 @@ p:last-child {
  * ================================================================================ */
 /** Modelli
  * ======================================== */
-.modelli .cover-modello {
-  max-height: 700px;
+.modelli .link-cover-modello {
+  position: relative;
+}
+.modelli .link-cover-modello .overlay {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.8s;
+}
+.modelli .link-cover-modello .cover-modello {
+  z-index: 1;
+  max-height: 750px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1.05);
+  transition: 1s;
 }
 @media (max-width: 1199.98px) {
-  .modelli .cover-modello {
+  .modelli .link-cover-modello .cover-modello {
     max-height: 500px;
   }
 }
-.modelli .cover-modello:hover {
-  opacity: 0.8;
-  transform: scale(1.1);
+.modelli .link-cover-modello .logo-image {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.modelli .link-cover-modello .logo-image img {
+  width: 40%;
+}
+.modelli .link-cover-modello:hover .cover-modello {
+  transform: scale(1);
+  transition: ease 1.4s;
+}
+.modelli .link-cover-modello:hover .logo-image {
+  opacity: 0.95;
+  transition: 1s;
+}
+.modelli .link-cover-modello:hover .overlay {
+  opacity: 0.6;
+  transition: 1s;
 }
 @media (max-width: 991.98px) {
   .modelli .logo-modello {
     flex-direction: row !important;
-  }
-}
-@media (max-width: 991.98px) {
-  .modelli .logo-modello .logo-image {
-    width: 50%;
-    margin-right: 20px;
   }
 }
 
