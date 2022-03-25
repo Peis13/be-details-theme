@@ -1,22 +1,19 @@
 <?php if (have_rows('modelli', 'option')): ?>
-<div id="modelli" class="modelli">
+<div id="modelli" class="modelli sezione">
 
     <?php while (have_rows('modelli', 'option')): the_row();
 
-    $rowDirection = 'flex-row';
+    $offset = '';
     $sideEffect = 'right';
     if (get_row_index() % 2 == 0) {
-        $rowDirection = 'flex-row-reverse';
+        $offset = 'offset-lg-6';
         $sideEffect = 'left';
     } ?>
 
-        <div class="modello sezione">
+        <div class="modello mb-5">
             <div class="container">
-                <div class="row <?= $rowDirection; ?>">
-                    <div class="logo-modello col-lg-4 d-flex flex-column justify-content-center align-items-center">
-                    </div>
-
-                    <div class="col-lg-6 offset-lg-2">
+                <div class="row">
+                    <div class="col-lg-6 <?= $offset; ?>">
                         <a href="<?= get_sub_field('link_pagina_modello'); ?>"
                            class="link-cover-modello d-block overflow-hidden">
                             <div class="overlay"></div>

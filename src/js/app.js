@@ -78,11 +78,11 @@ $(document).ready(function () {
             let pageScrollFromTop = $(document).scrollTop();
 
             // Animated
-            $('.animated').each(function () {
-                if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
-                    setTimeout(() => $(this).addClass('start-animation'), 100)
-                }
-            });
+            // $('.animated').each(function () {
+            //     if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
+            //         setTimeout(() => $(this).addClass('start-animation'), 1000)
+            //     }
+            // });
         }
 
         $(window).scroll(actOnScroll);

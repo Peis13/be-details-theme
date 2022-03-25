@@ -89,16 +89,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   (function () {
     var actOnScroll = function actOnScroll() {
       var pageScrollFromTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).scrollTop(); // Animated
-
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.animated').each(function () {
-        var _this = this;
-
-        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).offset().top <= pageScrollFromTop + window.innerHeight) {
-          setTimeout(function () {
-            return jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).addClass('start-animation');
-          }, 100);
-        }
-      });
+      // $('.animated').each(function () {
+      //     if ($(this).offset().top <= pageScrollFromTop + window.innerHeight) {
+      //         setTimeout(() => $(this).addClass('start-animation'), 1000)
+      //     }
+      // });
     };
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(actOnScroll);

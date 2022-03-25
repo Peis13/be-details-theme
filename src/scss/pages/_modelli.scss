@@ -7,6 +7,10 @@
 /** Modelli
  * ======================================== */
 .modelli {
+
+  .modello:not(:first-child) {
+    margin-top: -150px;
+  }
   .link-cover-modello {
     position: relative;
 
@@ -69,33 +73,26 @@
     @media (max-width: 991.98px) {
       flex-direction: row !important;
     }
-
-    //.logo-image {
-    //  @media (max-width: 991.98px) {
-    //    width: 50%;
-    //    margin-right: 20px;
-    //  }
-    //}
   }
 }
 
 /** Animazioni
  * ======================================== */
-.animated {
-  opacity: 0;
-  transition: transform 0.9s, opacity 0.6s;
-  position: relative;
-
-  &.right {
-    transform: translateX(50%);
-  }
-
-  &.left {
-    transform: translateX(-50%);
-  }
-
-  &.start-animation {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+//.animated {
+//  opacity: 0;
+//  transition: transform 0.9s, opacity 0.6s;
+//  position: relative;
+//
+//  &.right {
+//    transform: translateX(50%);
+//  }
+//
+//  &.left {
+//    transform: translateX(-50%);
+//  }
+//
+//  &.start-animation {
+//    opacity: 1;
+//    transform: translateX(0);
+//  }
+//}
